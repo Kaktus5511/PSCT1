@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="Loader.Views.DashboardView" Bind.AtDesignTime="True" LocalizeDictionary.DesignCulture="en" ResxLocalizationProvider.DefaultAssembly="Loader" ResxLocalizationProvider.DefaultDictionary="Translation" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:vm="clr-namespace:Loader.ViewModels" xmlns:cal="http://www.caliburnproject.org" xmlns:image="clr-namespace:CachedImage;assembly=CachedImage" xmlns:service="clr-namespace:PlaySharp.Service.WebService.Model;assembly=PlaySharp.Service" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:lex="http://wpflocalizeextension.codeplex.com">
+  <Grid>
+    <Grid Height="145" VerticalAlignment="Top" Margin="0,0,400,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="120" />
+        <ColumnDefinition Width="130" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <StackPanel Grid.Column="0">
+        <TextBlock Name="AccountName" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" TextBlock.FontWeight="Bold" TextBlock.FontSize="15" TextBlock.Foreground="{Binding AccountColor}" />
+        <Border Margin="10,5,0,0" Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1">
+          <image:Image ImageUrl="{Binding Avatar}" />
+        </Border>
+      </StackPanel>
+      <StackPanel Grid.Column="1" Margin="0,10,0,0">
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontWeight="Bold" TextBlock.FontSize="14" Text="{Loc Dashboard.Label.Account}" />
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontWeight="Bold" TextBlock.FontSize="14" Text="{Loc Dashboard.Label.Gamelimit}" />
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontWeight="Bold" TextBlock.FontSize="14" Text="{Loc Dashboard.Label.CoreVersion}" />
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontWeight="Bold" TextBlock.FontSize="14" Text="{Loc Dashboard.Label.GameVersion}" />
+      </StackPanel>
+      <StackPanel Grid.Column="2" Margin="0,10,0,0">
+        <TextBlock Name="AccountInfo" Text="" TextBlock.FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontSize="14" TextBlock.Foreground="{Binding AccountColor}" />
+        <TextBlock Name="Gamelimit" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontSize="14" />
+        <TextBlock Name="CoreVersion" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontSize="14" />
+        <TextBlock Name="GameVersion" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontSize="14" />
+      </StackPanel>
+    </Grid>
+    <Button Name="UploadLogs" Style="{StaticResource AccentedSquareButtonStyle}" Margin="10,149,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="5,1" Content="{Loc Dashboard.Button.UploadLogs}" />
+    <Button Name="ImportConfig" Style="{StaticResource AccentedSquareButtonStyle}" Margin="10,184,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="5,1" Content="{Loc Dashboard.Button.ImportConfig}" />
+    <GroupBox HorizontalAlignment="Right" Width="300" Header="{Loc Dashboard.Label.Changelog}">
+      <TabControl>
+        <TabItem>
+          <TabItem.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Text="Loader" TextBlock.FontSize="20" />
+            </DataTemplate>
+          </TabItem.HeaderTemplate>
+          <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ItemsControl Name="LoaderChangelog">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type service:ChangelogEntry}">
+                  <DockPanel Margin="0,0,0,10">
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                      <TextBlock TextBlock.FontWeight="Bold" Text="{Binding Version}" />
+                      <TextBlock Margin="5,0,0,0" Text="{Binding Time}" />
+                    </StackPanel>
+                    <ItemsControl DockPanel.Dock="Bottom" ItemsSource="{Binding Changes}">
+                      <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type system:String}">
+                          <BulletDecorator Margin="5,0,0,5" Width="270">
+                            <BulletDecorator.Bullet>
+                              <Ellipse Fill="#FF000000" Stroke="#FF000000" StrokeThickness="1" Width="6" Height="6" Margin="0,2,0,0" />
+                            </BulletDecorator.Bullet>
+                            <TextBlock Margin="5,0,0,0" TextWrapping="Wrap" Text="{Binding Path=., Converter={StaticResource StringEmptyToNUllConverter}, TargetNullValue=updated}" />
+                          </BulletDecorator>
+                        </DataTemplate>
+                      </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                  </DockPanel>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </ScrollViewer>
+        </TabItem>
+        <TabItem>
+          <TabItem.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Text="Core" TextBlock.FontSize="20" />
+            </DataTemplate>
+          </TabItem.HeaderTemplate>
+          <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ItemsControl Name="CoreChangelog">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type service:ChangelogEntry}">
+                  <DockPanel Margin="0,0,0,10">
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                      <TextBlock TextBlock.FontWeight="Bold" Text="{Binding Version}" />
+                      <TextBlock Margin="5,0,0,0" Text="{Binding Time}" />
+                    </StackPanel>
+                    <ItemsControl DockPanel.Dock="Bottom" ItemsSource="{Binding Changes}">
+                      <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type system:String}">
+                          <BulletDecorator Margin="5,0,0,5" Width="270">
+                            <BulletDecorator.Bullet>
+                              <Ellipse Fill="#FF000000" Stroke="#FF000000" StrokeThickness="1" Width="6" Height="6" Margin="0,2,0,0" />
+                            </BulletDecorator.Bullet>
+                            <TextBlock Margin="5,0,0,0" TextWrapping="Wrap" Text="{Binding Path=., Converter={StaticResource StringEmptyToNUllConverter}, TargetNullValue=updated}" />
+                          </BulletDecorator>
+                        </DataTemplate>
+                      </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                  </DockPanel>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </ScrollViewer>
+        </TabItem>
+      </TabControl>
+    </GroupBox>
+  </Grid>
+</UserControl>

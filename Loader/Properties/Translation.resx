@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Profile.Context.OpenGithub" xml:space="preserve">
+    <value>View on GitHub</value>
+  </data>
+  <data name="Database.Checkbox.Champion" xml:space="preserve">
+    <value>Champion</value>
+  </data>
+  <data name="Database.Column.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Database.Column.Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Settings.Label.LoaderUpdateChannel" xml:space="preserve">
+    <value>Loader Update Channel</value>
+  </data>
+  <data name="Message.ProfileExport.Body" xml:space="preserve">
+    <value>Copied Link to Clipboard.</value>
+  </data>
+  <data name="Settings.Label.DisableDrawings" xml:space="preserve">
+    <value>Disable Drawings</value>
+  </data>
+  <data name="Install.Label.Assembly" xml:space="preserve">
+    <value>3. Assembly</value>
+  </data>
+  <data name="Install.Button.Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="Login.Label.AuthKey" xml:space="preserve">
+    <value>Manual Login</value>
+  </data>
+  <data name="Message.AssemblyExport.Title" xml:space="preserve">
+    <value>Assembly Export</value>
+  </data>
+  <data name="Profiles.Checkbox.Champion" xml:space="preserve">
+    <value>Champion</value>
+  </data>
+  <data name="Profiles.Context.ImportProfile" xml:space="preserve">
+    <value>Import Profile</value>
+  </data>
+  <data name="Shell.Button.Database" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="Settings.Label.UseCloud" xml:space="preserve">
+    <value>Use Cloud Config</value>
+  </data>
+  <data name="Message.LogUploadCompleted.Title" xml:space="preserve">
+    <value>Log Upload</value>
+  </data>
+  <data name="Database.Column.Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Settings.Label.UserType" xml:space="preserve">
+    <value>User Type</value>
+  </data>
+  <data name="AssemblyType.Utility" xml:space="preserve">
+    <value>Utility</value>
+  </data>
+  <data name="Message.ProfileExport.Title" xml:space="preserve">
+    <value>Profile Export</value>
+  </data>
+  <data name="Profile.Column.Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Message.Ennola.1" xml:space="preserve">
+    <value>Ennola received an unknown VAC module. The process has been closed to keep you safe!\n\nYou can disable this behaviour in Settings at the risk of getting Banned!</value>
+  </data>
+  <data name="Database.Column.Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Settings.Label.ApiEndpoint" xml:space="preserve">
+    <value>API Server</value>
+  </data>
+  <data name="ReleaseChannel.Alpha" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
+  <data name="Profile.Context.AddLocalAssembly" xml:space="preserve">
+    <value>Add Local Assembly</value>
+  </data>
+  <data name="Profiles.Label.Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="Settings.Label.Menu" xml:space="preserve">
+    <value>Menu Key</value>
+  </data>
+  <data name="AssemblyType.Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Profile.Column.Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Shell.Button.Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Settings.Label.AutoAccept" xml:space="preserve">
+    <value>Auto Accept</value>
+  </data>
+  <data name="Settings.Label.UseSandbox" xml:space="preserve">
+    <value>Use Sandbox</value>
+  </data>
+  <data name="Settings.Button.Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Profiles.Label.Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Message.PathRandomization.Body" xml:space="preserve">
+    <value>Detected 'PlaySharp' in your Loader path, to increase security we moved your Loader to a randomized location.\n\nPath: {0}\n\nCreate Desktop shortcut?</value>
+  </data>
+  <data name="Dashboard.Label.CoreVersion" xml:space="preserve">
+    <value>Core Version</value>
+  </data>
+  <data name="Install.Button.Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Message.AssemblyExport.Body" xml:space="preserve">
+    <value>Copied Link to Clipboard.</value>
+  </data>
+  <data name="Profile.Column.Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Login.Button.Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Settings.Label.ShowDescription" xml:space="preserve">
+    <value>Display Description</value>
+  </data>
+  <data name="Message.LanguageChanged.Title" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="Message.EnnolaKillswitch.Body" xml:space="preserve">
+    <value>WARNING: Enabling this option can get you banned!</value>
+  </data>
+  <data name="ServiceType.Dota" xml:space="preserve">
+    <value>Dota 2 Reborn</value>
+  </data>
+  <data name="Profile.Context.ShareAssembly" xml:space="preserve">
+    <value>Share Assembly</value>
+  </data>
+  <data name="Profile.Context.OpenForum" xml:space="preserve">
+    <value>View on Forum</value>
+  </data>
+  <data name="Settings.Label.MenuToggle" xml:space="preserve">
+    <value>Menu Toggle Key</value>
+  </data>
+  <data name="Profiles.Context.DeleteProfile" xml:space="preserve">
+    <value>Delete Profile</value>
+  </data>
+  <data name="Message.Install.InvalidProfileType.Body" xml:space="preserve">
+    <value>Can't add Assembly of Type '{0}' to '{1}' profile.</value>
+  </data>
+  <data name="Login.Watermark.AuthKey" xml:space="preserve">
+    <value>Auth Key</value>
+  </data>
+  <data name="Profile.Context.DeleteAssembly" xml:space="preserve">
+    <value>Delete Assembly</value>
+  </data>
+  <data name="UserType.Developer" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="Settings.Button.SaveConfig" xml:space="preserve">
+    <value>Save Config</value>
+  </data>
+  <data name="Settings.Label.Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Settings.Label.Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings.Label.GameService" xml:space="preserve">
+    <value>Game Service</value>
+  </data>
+  <data name="Install.Label.Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Install.Label.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Dashboard.Label.Gamelimit" xml:space="preserve">
+    <value>Gamelimit</value>
+  </data>
+  <data name="Settings.Label.Recompile" xml:space="preserve">
+    <value>Recompile Key</value>
+  </data>
+  <data name="Database.Checkbox.Utility" xml:space="preserve">
+    <value>Utility</value>
+  </data>
+  <data name="Settings.Label.DataEndpoint" xml:space="preserve">
+    <value>Data Server</value>
+  </data>
+  <data name="Dashboard.Label.GameVersion" xml:space="preserve">
+    <value>Game Version</value>
+  </data>
+  <data name="Message.Install.NoProfile.Body" xml:space="preserve">
+    <value>No Profile selected. Create or Select one first.</value>
+  </data>
+  <data name="Message.Install.InvalidProfileType.Title" xml:space="preserve">
+    <value>Invalid Profile</value>
+  </data>
+  <data name="Message.ConfigImport.Body" xml:space="preserve">
+    <value>Config import complete.\n\nImported: {0}\nFailed: {1}</value>
+  </data>
+  <data name="Dashboard.Button.UploadLogs" xml:space="preserve">
+    <value>Upload Logs</value>
+  </data>
+  <data name="Settings.Label.UpdateSelectedOnly" xml:space="preserve">
+    <value>Update Selected Only</value>
+  </data>
+  <data name="Settings.Button.ClearCache" xml:space="preserve">
+    <value>Clear Cache</value>
+  </data>
+  <data name="Login.Button.Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Profiles.Checkbox.Utility" xml:space="preserve">
+    <value>Utility</value>
+  </data>
+  <data name="Database.Checkbox.Library" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Settings.Label.Unload" xml:space="preserve">
+    <value>Unload Key</value>
+  </data>
+  <data name="Database.Context.OpenForum" xml:space="preserve">
+    <value>View on Forum</value>
+  </data>
+  <data name="Settings.Label.Console" xml:space="preserve">
+    <value>Show Console</value>
+  </data>
+  <data name="AssemblyType.Champion" xml:space="preserve">
+    <value>Champion</value>
+  </data>
+  <data name="Shell.Button.Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="Settings.Label.Reload" xml:space="preserve">
+    <value>Reload Key</value>
+  </data>
+  <data name="Message.Install.NoProfile.Title" xml:space="preserve">
+    <value>Invalid Profile</value>
+  </data>
+  <data name="Database.Watermark.Search" xml:space="preserve">
+    <value>Search ...</value>
+  </data>
+  <data name="Message.LogUploadCompleted.Body" xml:space="preserve">
+    <value>Copied Link to clipboard.</value>
+  </data>
+  <data name="Database.Button.Install" xml:space="preserve">
+    <value>Install Selected</value>
+  </data>
+  <data name="Message.Outdated.Body" xml:space="preserve">
+    <value>PlaySharp is outdated for your Game version.\n\n{0}</value>
+  </data>
+  <data name="ReleaseChannel.Beta" xml:space="preserve">
+    <value>Beta</value>
+  </data>
+  <data name="Database.Context.OpenGithub" xml:space="preserve">
+    <value>View on GitHub</value>
+  </data>
+  <data name="Install.Label.Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Message.PathRandomization.Title" xml:space="preserve">
+    <value>Path Randomization</value>
+  </data>
+  <data name="Message.Outdated.Title" xml:space="preserve">
+    <value>OUTDATED</value>
+  </data>
+  <data name="Profile.Column.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Profile.Column.Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Profile.Column.Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Install.Label.Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Profiles.Context.ShareProfile" xml:space="preserve">
+    <value>Share Profile</value>
+  </data>
+  <data name="Dashboard.Label.Changelog" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="Database.Column.Updated" xml:space="preserve">
+    <value>Last Updated</value>
+  </data>
+  <data name="UserType.Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Dashboard.Button.ImportConfig" xml:space="preserve">
+    <value>Import Config</value>
+  </data>
+  <data name="Shell.Button.Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Settings.Label.DisableKillswitch" xml:space="preserve">
+    <value>Disable Ennola kill</value>
+  </data>
+  <data name="AssemblyType.Library" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Profiles.Checkbox.Library" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Install.Label.Source" xml:space="preserve">
+    <value>1. Source</value>
+  </data>
+  <data name="Message.ConfigImport.Title" xml:space="preserve">
+    <value>Config Import</value>
+  </data>
+  <data name="Database.Column.Votes" xml:space="preserve">
+    <value>Votes</value>
+  </data>
+  <data name="Message.LanguageChanged.Body" xml:space="preserve">
+    <value>Language changed to {0}\nRestart to apply changes.</value>
+  </data>
+  <data name="ServiceType.LoL" xml:space="preserve">
+    <value>League of Legends</value>
+  </data>
+  <data name="Install.Label.Projects" xml:space="preserve">
+    <value>2. Projects</value>
+  </data>
+  <data name="Profiles.Context.CreateProfile" xml:space="preserve">
+    <value>Create Profile</value>
+  </data>
+  <data name="Settings.Label.ShowNotes" xml:space="preserve">
+    <value>Display Notes</value>
+  </data>
+  <data name="Dashboard.Label.Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="UserType.Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="ReleaseChannel.Release" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="Profiles.Watermark.Search" xml:space="preserve">
+    <value>Search ...</value>
+  </data>
+  <data name="Profile.Context.Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Settings.Label.Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+</root>

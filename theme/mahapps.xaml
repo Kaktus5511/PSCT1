@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:model="clr-namespace:PlaySharp.Service.WebService.Model;assembly=PlaySharp.Service" xmlns:metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro" xmlns:globalization="clr-namespace:System.Globalization;assembly=mscorlib">
+  <Style x:Key="MetroEnumComboBox" TargetType="{x:Type EnumComboBox}" BasedOn="{StaticResource MetroComboBox}" />
+  <DataTemplate x:Key="HealthEntryTemplate" DataType="{x:Type model:HealthEntry}">
+    <StackPanel Orientation="Horizontal" Margin="0,0,10,0">
+      <TextBlock Margin="0,0,4,0" Text="{Binding Name}" />
+      <TextBlock Text="{Binding State}">
+        <TextBlock.Style>
+          <Style TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+              <DataTrigger Binding="{Binding IsHealthy}" Value="True">
+                <Setter Property="TextBlock.Foreground" Value="#FF008000" />
+              </DataTrigger>
+              <DataTrigger Binding="{Binding IsHealthy}" Value="False">
+                <Setter Property="TextBlock.Foreground" Value="#FFFF0000" />
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </TextBlock.Style>
+      </TextBlock>
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="EndpointTemplate" DataType="{x:Type model:EndpointEntry}">
+    <TextBlock>
+      <Run Text="{Binding Hostname}" /> <Run Text="(" /> <Run Text="{Binding Ping, IsAsync=True, Mode=OneWay}" /> <Run Text="ms)" /></TextBlock>
+  </DataTemplate>
+  <DataTemplate x:Key="AccentTemplate" DataType="{x:Type metro:Accent}">
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+      <Rectangle Width="18" Height="18">
+        <Rectangle.Fill>
+          <SolidColorBrush Color="{Binding Name}" />
+        </Rectangle.Fill>
+      </Rectangle>
+      <TextBlock Margin="5,0,0,0" Text="{Binding Name}" />
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="LanguageTemplate" DataType="{x:Type globalization:CultureInfo}">
+    <TextBlock Text="{Binding NativeName}" />
+  </DataTemplate>
+  <DataTemplate x:Key="AppThemeTemplate" DataType="{x:Type metro:AppTheme}">
+    <TextBlock Text="{Binding Name}" />
+  </DataTemplate>
+  <DataTemplate x:Key="SelectedEndpointTemplate" DataType="{x:Type model:EndpointEntry}">
+    <TextBlock Text="{Binding Hostname}" />
+  </DataTemplate>
+</ResourceDictionary>

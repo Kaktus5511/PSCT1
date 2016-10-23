@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="Loader.Views.InstallView" Bind.AtDesignTime="True" LocalizeDictionary.DesignCulture="en" ResxLocalizationProvider.DefaultAssembly="Loader" ResxLocalizationProvider.DefaultDictionary="Translation" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:viewModels="clr-namespace:Loader.ViewModels" xmlns:cal="http://www.caliburnproject.org" xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:model="clr-namespace:PlaySharp.Service.WebService.Model;assembly=PlaySharp.Service">
+  <Grid>
+    <GroupBox Margin="10,10,10,0" VerticalAlignment="Top" Height="75" Header="{Loc Install.Label.Source}">
+      <Grid Margin="5,0" Height="30">
+        <TextBox Name="Source" Message.Attach="[Key Enter] = [Action UpdateProjects]" Margin="0,0,100,0" TextBoxHelper.Watermark="https://github.com/h3h3/LeagueSharp + [enter]" VerticalAlignment="Top" Height="28" />
+        <Button Name="BrowseLocal" Width="75" Margin="0" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource AccentedSquareButtonStyle}" Height="28" Content="{Loc Install.Button.Local}" />
+      </Grid>
+    </GroupBox>
+    <GroupBox Margin="10,90,0,0" VerticalAlignment="Top" Height="150" Width="350" HorizontalAlignment="Left" Header="{Loc Install.Label.Projects}">
+      <ScrollViewer Margin="5">
+        <ListBox Name="Projects" DisplayMemberPath="Name" SelectedItem="{Binding SelectedProject}" />
+      </ScrollViewer>
+    </GroupBox>
+    <GroupBox Margin="10,245,10,0" VerticalAlignment="Top" Header="{Loc Install.Label.Assembly}">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="100" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Button Name="Add" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="75" Margin="0,0,10,10" Style="{StaticResource AccentedSquareButtonStyle}" Height="28" Content="{Loc Install.Button.Add}" />
+        <ComboBox Name="Profiles" Grid.Column="1" Grid.Row="1" DisplayMemberPath="Name" Margin="0,0,100,10" Height="28" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" />
+        <StackPanel Grid.Column="0" Grid.Row="0">
+          <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Margin="0,0,0,5" Content="{Loc Install.Label.Name}" />
+          <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Margin="0,0,0,5" Content="{Loc Install.Label.Author}" />
+          <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Margin="0,0,0,5" Content="{Loc Install.Label.Type}" />
+          <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Margin="0,0,0,5" Content="{Loc Install.Label.Description}" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0">
+          <TextBox Name="Name" Height="25" VerticalAlignment="Top" Margin="0,0,0,5" Width="250" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+          <TextBox Name="Author" Height="25" VerticalAlignment="Top" Margin="0,0,0,5" HorizontalAlignment="Left" Width="250" VerticalContentAlignment="Center" />
+          <EnumComboBox Type="{x:Type model:AssemblyType}" PrependType="True" Separator="." FrameworkElement.Height="25" FrameworkElement.VerticalAlignment="Top" FrameworkElement.Margin="0,0,0,5" FrameworkElement.Style="{StaticResource MetroEnumComboBox}" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Width="100" Control.VerticalContentAlignment="Center" Selector.SelectedValue="{Binding Type}" />
+          <TextBox Name="Description" Height="25" VerticalAlignment="Top" Margin="0,0,10,5" VerticalContentAlignment="Center" />
+        </StackPanel>
+      </Grid>
+    </GroupBox>
+  </Grid>
+</UserControl>

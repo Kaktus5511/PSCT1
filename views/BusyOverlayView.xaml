@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="Loader.Views.BusyOverlayView" Name="root" Bind.AtDesignTime="True" BorderThickness="0,1,0,0" BorderBrush="{StaticResource AccentColorBrush}" helper:StateHelper.State="{Binding State, UpdateSourceTrigger=PropertyChanged}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:cal="http://www.caliburnproject.org" xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls" xmlns:viewModels="clr-namespace:Loader.ViewModels" xmlns:helpers="clr-namespace:Loader.Helpers" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:helper="clr-namespace:PlaySharp.Toolkit.Helper;assembly=PlaySharp.Toolkit">
+  <Grid>
+    <VisualStateManager.CustomVisualStateManager>
+      <ExtendedVisualStateManager />
+    </VisualStateManager.CustomVisualStateManager>
+    <VisualStateManager.VisualStateGroups>
+      <VisualStateGroup x:Name="CommonStates" ExtendedVisualStateManager.UseFluidLayout="True">
+        <VisualStateGroup.Transitions>
+          <VisualTransition GeneratedDuration="0:0:0.5" />
+        </VisualStateGroup.Transitions>
+        <VisualState x:Name="Open">
+          <Storyboard>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="root">
+              <EasingDoubleKeyFrame KeyTime="0" Value="170" />
+            </DoubleAnimationUsingKeyFrames>
+          </Storyboard>
+        </VisualState>
+        <VisualState x:Name="Closed">
+          <Storyboard>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="root">
+              <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+          </Storyboard>
+        </VisualState>
+      </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+    <Border Background="#BFFFFFFF">
+      <StackPanel VerticalAlignment="Center">
+        <Grid>
+          <StackPanel Margin="50,0">
+            <TextBlock Name="Text" HorizontalAlignment="Center" Margin="0" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" TextBlock.Foreground="{DynamicResource AccentColorBrush}" />
+            <Border Margin="0,10,0,0" Height="20" BorderThickness="1" BorderBrush="{DynamicResource AccentColorBrush}">
+              <MetroProgressBar FrameworkElement.Height="18" RangeBase.Value="{Binding Value}" RangeBase.Maximum="{Binding Maximum}" />
+            </Border>
+          </StackPanel>
+        </Grid>
+        <Grid Margin="50,10,50,0" Visibility="{Binding IsDownloading, Converter={StaticResource BooleanToVisibilityConverter}}">
+          <StackPanel>
+            <TextBlock Name="DownloadText" HorizontalAlignment="Center" Margin="0" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" TextBlock.Foreground="{DynamicResource AccentColorBrush}" />
+            <Border Margin="0,10,0,0" Height="20" BorderThickness="1" BorderBrush="{DynamicResource AccentColorBrush}">
+              <MetroProgressBar FrameworkElement.Height="18" RangeBase.Value="{Binding DownloadProgressValue}" RangeBase.Maximum="{Binding DownloadProgressMaximum}" />
+            </Border>
+          </StackPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,50,0">
+          <Button Name="Abort" Content="abort" Width="60" Style="{DynamicResource AccentedSquareButtonStyle}" />
+        </Grid>
+      </StackPanel>
+    </Border>
+  </Grid>
+</UserControl>

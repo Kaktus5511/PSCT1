@@ -1,0 +1,70 @@
+{
+  "$type": "Loader.Model.Config.ServiceSettings, Loader",
+  "AppDomainFileName": "EnsageSharp.Sandbox.dll",
+  "AppName": "EnsageSharp",
+  "Assemblies": [],
+  "BootstrapFileName": "PlaySharp.CLR.Native.X64.dll",
+  "CoreBridgeFileName": "Ensage.dll",
+  "CoreFileName": "Ensage.Core.dll",
+  "GameSettings": [
+    {
+      "$type": "Loader.Model.Config.GameSettingEntry, Loader",
+      "Name": "AutoAccept",
+      "PosibleValues": [
+        "True",
+        "False"
+      ],
+      "SelectedValue": "True"
+    },
+    {
+      "$type": "Loader.Model.Config.GameSettingEntry, Loader",
+      "Name": "DisableDrawings",
+      "PosibleValues": [
+        "True",
+        "False"
+      ],
+      "SelectedValue": "False"
+    }
+  ],
+  "Hotkeys": [
+    {
+      "$type": "Loader.Model.Config.HotkeyEntry, Loader",
+      "DefaultKey": 94,
+      "Description": "Reload the assemblies",
+      "Hotkey": 94,
+      "Name": "Reload"
+    },
+    {
+      "$type": "Loader.Model.Config.HotkeyEntry, Loader",
+      "DefaultKey": 97,
+      "Description": "Recompile and reload the assemblies",
+      "Hotkey": 97,
+      "Name": "ReloadAndRecompile"
+    },
+    {
+      "$type": "Loader.Model.Config.HotkeyEntry, Loader",
+      "DefaultKey": 95,
+      "Description": "Unload all assemblies",
+      "Hotkey": 95,
+      "Name": "Unload"
+    },
+    {
+      "$type": "Loader.Model.Config.HotkeyEntry, Loader",
+      "DefaultKey": 116,
+      "Description": "Shows the menu (Press)",
+      "Hotkey": 116,
+      "Name": "Menu"
+    },
+    {
+      "$type": "Loader.Model.Config.HotkeyEntry, Loader",
+      "DefaultKey": 98,
+      "Description": "Shows the menu (Toggle)",
+      "Hotkey": 98,
+      "Name": "MenuToggle"
+    }
+  ],
+  "PlatformTarget": "x64",
+  "ProcessName": "dota2",
+  "Profiles": [],
+  "SharedMemoryName": "EnsageBootstrap"
+}
